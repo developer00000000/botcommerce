@@ -5,7 +5,6 @@ import {
   TeamOutlined,
   UserOutlined,
 } from '@ant-design/icons';
-import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { GrAppsRounded } from 'react-icons/gr';
 import { IoStatsChartOutline } from 'react-icons/io5';
@@ -16,7 +15,7 @@ import { IoSettingsOutline } from 'react-icons/io5';
 
 const Sidebar = () => {
   return (
-    <div className="bg-[#012874] h-screen w-[280px] text-white font-medium">
+    <div className="bg-[#012874] h-screen w-[280px] text-white font-medium flex-col">
       <div className="flex items-center py-6 px-4">
         <div className="w-full flex items-center justify-center">
           <span className="text-2xl font-bold">botCommerce.io</span>

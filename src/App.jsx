@@ -1,4 +1,3 @@
-import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import Panel from './components/Panel';
@@ -15,13 +14,13 @@ import Profile from './pages/Profile';
 
 const App = () => {
   return (
-    <div className="flex h-screen overflow-hidden">
+    <div className="flex h-screen ">
       <Sidebar />
 
-      <div className="flex flex-col flex-grow">
+      <div className="flex-1 flex-col flex-grow">
         <Panel />
 
-        <div className="flex-grow p-6 mt-[60px] overflow-y-auto">
+        <div className="flex-1 p-6 mt-[20px] overflow-y-auto">
           <Routes>
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/categories" element={<Categories />} />

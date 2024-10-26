@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import  { useState } from "react";
 import {
   FaShoppingBag,
   FaQuestionCircle,
   FaMoon,
   FaBell,
-} from 'react-icons/fa';
+} from "react-icons/fa";
 
 const Panel = () => {
   const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false);
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
-  const [selectedLang, setSelectedLang] = useState('🇺🇿 Uz');
+  const [selectedLang, setSelectedLang] = useState("🇺🇿 Uz");
 
   const handleLangSelect = (lang, label) => {
     setSelectedLang(`${lang} ${label}`);
@@ -21,7 +21,7 @@ const Panel = () => {
   };
 
   return (
-    <div className="flex justify-between items-center p-4 bg-[#012874] fixed top-0 w-[1260px]">
+    <div className="flex items-center justify-between p-4  border-b border-gray-700 bg-[#012874]  ">
       <div className="flex items-center space-x-3">
         <FaShoppingBag className="text-white text-2xl" />
         <span className="text-white">Hello</span>
@@ -59,21 +59,21 @@ const Panel = () => {
               <a
                 href="#"
                 className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
-                onClick={() => handleLangSelect('en', 'En')}
+                onClick={() => handleLangSelect("en", "En")}
               >
                 En
               </a>
               <a
                 href="#"
                 className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
-                onClick={() => handleLangSelect('🇷🇺', 'Ru')}
+                onClick={() => handleLangSelect("🇷🇺", "Ru")}
               >
                 Ru
               </a>
               <a
                 href="#"
                 className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
-                onClick={() => handleLangSelect('🇺🇿', 'Uz')}
+                onClick={() => handleLangSelect("🇺🇿", "Uz")}
               >
                 Uz
               </a>
