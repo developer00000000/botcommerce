@@ -21,7 +21,7 @@ const App = () => {
       <div className="flex-1 flex-col flex-grow">
         <Panel />
 
-        <div className="flex-1 p-6 mt-[20px] overflow-y-auto">
+        <div className="flex-1 overflow-y-auto">
           <Routes>
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/categories" element={<Categories />} />
