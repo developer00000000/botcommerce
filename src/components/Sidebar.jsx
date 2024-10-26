@@ -5,7 +5,6 @@ import {
   TeamOutlined,
   UserOutlined,
 } from '@ant-design/icons';
-import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { GrAppsRounded } from 'react-icons/gr';
 import {
@@ -18,7 +17,7 @@ import { GrServicePlay } from 'react-icons/gr';
 
 const Sidebar = () => {
   return (
-    <div className="bg-[#012874] h-screen w-[280px] text-white font-medium">
+    <div className="bg-[#012874] h-screen w-[280px] text-white font-medium flex-col">
       <div className="flex items-center py-6 px-4">
         <div className="w-full flex items-center justify-center">
           <span className="text-2xl font-bold">botCommerce.io</span>
@@ -136,7 +135,7 @@ const Sidebar = () => {
           <h3 className="text-lg">Profilim</h3>
         </NavLink>
         <NavLink
-          to="/pos"
+          to="/post"
           className={({ isActive }) =>
             isActive
               ? 'flex items-center space-x-3 text-teal-400'
