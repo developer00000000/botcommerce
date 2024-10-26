@@ -1,14 +1,20 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import PropTypes from 'prop-types';
-import { FiSearch, FiPlus, FiUpload, FiEdit, FiTrash2, FiGlobe } from 'react-icons/fi';
+import {
+  FiSearch,
+  FiPlus,
+  FiUpload,
+  FiEdit,
+  FiTrash2,
+  FiGlobe,
+} from 'react-icons/fi';
 
 function CategoriesPage() {
   return (
-    <div className="p-6   text-gray-900 dark:text-white min-h-screen">
+    <div className="p-6 text-gray-900 dark:text-white min-h-screen">
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-2xl font-semibold">Kategoriyalar</h2>
         <div className="flex items-center space-x-4">
-    
           <div className="relative">
             <input
               type="text"
@@ -30,12 +36,24 @@ function CategoriesPage() {
         <table className="min-w-full bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
           <thead>
             <tr>
-              <th className="p-3 border-b border-gray-300 dark:border-gray-700 text-center">Emoji</th>
-              <th className="p-3 border-b border-gray-300 dark:border-gray-700 text-center">Nom</th>
-              <th className="p-3 border-b border-gray-300 dark:border-gray-700 text-center">Asosiy kategoriya</th>
-              <th className="p-3 border-b border-gray-300 dark:border-gray-700 text-center">Mavjudligi</th>
-              <th className="p-3 border-b border-gray-300 dark:border-gray-700 text-center">Web-saytda ko'rsatish</th>
-              <th className="p-3 border-b border-gray-300 dark:border-gray-700 text-center">Harakatlar</th>
+              <th className="p-3 border-b border-gray-300 dark:border-gray-700 text-center">
+                Emoji
+              </th>
+              <th className="p-3 border-b border-gray-300 dark:border-gray-700 text-center">
+                Nom
+              </th>
+              <th className="p-3 border-b border-gray-300 dark:border-gray-700 text-center">
+                Asosiy kategoriya
+              </th>
+              <th className="p-3 border-b border-gray-300 dark:border-gray-700 text-center">
+                Mavjudligi
+              </th>
+              <th className="p-3 border-b border-gray-300 dark:border-gray-700 text-center">
+                Web-saytda ko'rsatish
+              </th>
+              <th className="p-3 border-b border-gray-300 dark:border-gray-700 text-center">
+                Harakatlar
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -58,10 +76,16 @@ function CategoryRow({ emoji, name }) {
       <td className="p-3">{name}</td>
       <td className="p-3">Mavjud emas</td>
       <td className="p-3">
-        <Switch isOn={available} toggleSwitch={() => setAvailable(!available)} />
+        <Switch
+          isOn={available}
+          toggleSwitch={() => setAvailable(!available)}
+        />
       </td>
       <td className="p-3">
-        <Switch isOn={displayOnWebsite} toggleSwitch={() => setDisplayOnWebsite(!displayOnWebsite)} />
+        <Switch
+          isOn={displayOnWebsite}
+          toggleSwitch={() => setDisplayOnWebsite(!displayOnWebsite)}
+        />
       </td>
       <td className="p-3 flex justify-center space-x-2">
         <FiGlobe className="text-blue-400 cursor-pointer" />
